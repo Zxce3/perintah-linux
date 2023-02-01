@@ -1,0 +1,15 @@
+
+title: Perintah Linux
+name: Perintah Linux
+description: Daftar perintah linux bahasa indonesia
+url: /
+language: en
+repo: "Zxce3/perintah-linux"
+resource:
+  - name: Perintah tes
+    url: 'https://github.com/gnuweeb'
+  - name: Perintah tes
+    url: 'https://lore.gnuweeb.org'
+social:
+  - name: Perintah tes
+    url: 'https://gnuweeb.org/sitemap.xml'

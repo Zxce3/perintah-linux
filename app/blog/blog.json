@@ -1,0 +1,9 @@
+{
+  "tags": [
+    "posts"
+  ],
+  "layout": "post.liquid",
+  "section_title": "Blog",
+  "permalink": "{{ title | slugify }}/index.html",
+  "eleventyExcludeFromCollections": false
+}

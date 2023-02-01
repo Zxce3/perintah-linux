@@ -1,0 +1,30 @@
+<div class="row">
+{% for item in contrib %}
+        <div class="col-lg-6">
+            <div class="mw-full text-decoration-none border-bottom border-top border-right shadow-lg rounded m-5 p-0 d-flex">
+
+                <div class="flex-grow-1 d-flex align-items-center">
+                        <div>
+                            <img src="{{ item.avatar_url }}" class="d-block w-100 h-100 rounded border-left border-right shadow-lg" alt="">
+                        </div>
+                    <div class="p-10 w-full m-auto">
+                        <p class="m-0 font-weight-bold text-dark-lm text-light-dm">
+                            {{ item.login }}
+                        </p>
+                        <p class="m-0 mt-5 text-muted font-size-12">
+                            > {{ item.contributions }} commit
+                        </p>
+                        <p class="m-0 mt-5">
+                            <a href="https://github.com/{{ site.repo }}/commits?author={{ item.login }}" target="_blank" class="badge">
+                                <i class="bi bi-clock-history"></i> History
+                            </a>
+                            <a href="{{ item.html_url }}" target="_blank" class="badge">
+                                <i class="bi bi-github"></i> Github
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endfor %}
+</div>

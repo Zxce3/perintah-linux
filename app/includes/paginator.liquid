@@ -1,0 +1,47 @@
+<section id="content" class="body">
+    <div class="row">
+        {%- for post in pagination.items -%}
+        <div class="col-lg-6">
+            <div class="mw-full text-decoration-none border-bottom border-top border-right shadow-lg rounded m-5 p-0 d-flex">
+
+                <div class="flex-grow-1 d-flex align-items-center">
+                        <div>
+                            <img src="https://cdn.jsdelivr.net/gh/zxce3/zxce3/icons/git-logo.svg" class="d-block w-100 h-100 rounded border-left border-right shadow-lg" alt="">
+                        </div>
+                    <div class="p-10 w-full m-auto">
+                        <p class="m-0 font-weight-bold text-dark-lm text-light-dm">
+                            {{ post.data.title }}
+                        </p>
+                        <p class="m-0 mt-5 text-muted font-size-12">
+                            > {{ post.date | fullDate }}
+                        </p>
+                        <p class="m-0 mt-5">
+                            <a href="{{ post.url }}" class="badge">
+                                <i class="bi bi-book"></i> Baca
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {%- endfor -%}
+    </div>
+    <nav aria-label="Page navigation">
+        <ul class="pagination text-center">
+            {% if pagination.previous %}
+            <li class="page-item">
+                <a href="{{ pagination.previous  | remove: 'index.html' | remove: '.html' }}" class="page-link">
+                    <i class="bi bi-caret-left" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% endif %}
+            {% if pagination.next %}
+            <li class="page-item">
+                <a href="{{ pagination.next  | remove: 'index.html' | remove: '.html' }}" class="page-link">
+                    <i class="bi bi-caret-right" aria-hidden="true"></i>
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+</section>

@@ -1,0 +1,15 @@
+---
+layout: base
+title: Blog
+icon: newspaper
+pagination:
+  data: collections.posts
+  size: 10
+  reverse: true
+  alias: posts
+permalink: "blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+---
+
+<h1>Blog</h1>
+
+{% include 'paginator.liquid' %}

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+{% include 'head.liquid' %}
+
+<body class="dark-mode with-custom-webkit-scrollbars with-custom-css-scrollbars" data-set-preferred-mode-onload="true"
+    data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-controller="search">
+    <div id="page-wrapper" class="page-wrapper">
+<div class="content-wrapper d-lg-flex align-items-lg-center">
+    <div class="container-lg">
+        <div class="row">
+
+            <!-- Hero start -->
+            <div class="col-lg-8">
+                <div class="content">
+
+                    <!-- Header, content, and CTAs start -->
+                    <h1 class="hero-header">
+                        <strong class="font-weight-bolder">Perintah Linux - Daftar perintah Linux dalam bahasa indonesia dan sumber terbuka</strong>
+                    </h1>
+                    <p class="hero-content">
+                        Perintah Linux adalah website yang menyediakan daftar perintah Linux
+                        dalam bahasa indonesia dan sumbernya terbuka untuk semua. Pelajari dan praktikan perintah
+                        Linux yang penting dan bermanfaat untuk memaksimalkan penggunaan sistem operasi linux.
+                    </p>
+                    <div class="mt-20">
+                        <input type="search" autocomplete="off" class="form-control" placeholder="Cari disini" id="search-input">
+                        <ul id="search-results" style="display: none;"></ul>
+                    </div>
+                    <!-- Header, content, and CTAs end -->
+                </div>
+            </div>
+            <!-- Hero end -->
+
+            <!-- tux animation start -->
+            <div class="col-lg-4 d-flex align-items-center justify-content-center">
+                <div class="content">
+                    <br>
+                    <div class="launchpad-animation-container">
+                        <div class="tux-container dropdown dropup">
+                            <a class="bg-trasnparent" data-toggle="dropdown" type="button" id="dropimage" aria-haspopup="true" aria-expanded="false" >
+                            <img class="tux img-fluid" alt="tux" src="/assets/img/tux.png">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-center" aria-labelledby="dropimage">
+    {%- for pg in collections.pages -%}
+    <a href="{{ pg.url }}" class="dropdown-item">{{ pg.data.title }}</a>
+    {%- endfor -%}
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-content">
+        <a href="#" class="btn btn-block">
+            <i class="bi bi-github"></i>
+            Github
+        </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tux animation end -->
+            <link rel="stylesheet" href="assets/landing.css">
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+
+</html>

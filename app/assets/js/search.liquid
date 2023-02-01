@@ -1,0 +1,10 @@
+---
+permalink: /assets/search.json
+---
+[{% for item in collections.perintah %}
+  {
+    "t": "{{ item.data.title }}",
+    "u": "{{ item.url }}",
+    "d": "{{ item.data.description }}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

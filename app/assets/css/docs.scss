@@ -1,0 +1,838 @@
+$color_1: rgba(0, 0, 0, 0.7);
+$color_2: rgba(255, 255, 255, 0.65);
+$color_3: #1890ff;
+$color_4: rgba(0, 0, 0, 0.65);
+$color_5: rgba(255, 255, 255, 0.6);
+$font-family_1: -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family_2: "Roboto", sans-serif;
+$font-family_3: Monaco, Menlo, Consolas, "Courier New", monospace;
+$background-color_1: #ffffff;
+$background-color_2: #25282c;
+$background-color_3: rgba(0, 0, 0, 0.025);
+$background-color_4: #111417;
+$background-color_5: #ecf0f1;
+$background-color_6: rgba(0, 0, 0, 0.1);
+$background-color_7: rgba(255, 255, 255, 0.1);
+$background-color_8: #191c20;
+$background-color_9: #dadfe1;
+$background-color_10: #1e2125;
+$background-color_11: rgba(255, 255, 255, 0.975);
+$background-color_12: rgba(30, 33, 37, 0.95);
+$border-color_1: #1890ff transparent transparent transparent;
+$border-color_2: rgba(255, 255, 255, 0.15);
+$border-color_3: rgba(0, 0, 0, 0.2);
+$border-color_4: rgba(255, 255, 255, 0.2);
+$border-color_5: rgba(255, 255, 255, 0.025);
+$border-color_6: rgba(255, 255, 255, 0.1);
+$border-color_7: rgba(0, 0, 0, 0.1);
+$border-top-color_1: rgba(0, 0, 0, 0.1);
+$border-right-color_1: transparent;
+$border-right-color_2: rgba(0, 0, 0, 0.2);
+$border-right-color_3: rgba(255, 255, 255, 0.15);
+$border-bottom-color_1: transparent;
+$border-left-color_1: transparent;
+$outline-color_1: rgba(255, 255, 255, 0.15);
+$outline-color_2: #111417;
+$outline-color_3: #dadfe1;
+
+/* Documentation styles. Copyright Halfmoon UI */
+/* Font */
+/* Loading section */
+@keyframes loader-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Branding and logo */
+/* Navbar */
+/* Sidebar */
+/* Download button */
+/* Sidenav */
+/* Custom footer */
+/* Code */
+/* Subscriber form container */
+/* Docs footer card */
+/* Utilities */
+/* Columns */
+/* Background color box */
+/* Fake window */
+/* Container box */
+/* Dropdown aligment button */
+/* Fake sidebar */
+/* Card full width on extra small screens */
+/* Docs cards container */
+/* Docs navbar/sidebar container */
+/* iFrame message */
+/* Starter template */
+/* Customization demo */
+/* Code header */
+/* Show/hide based on IE */
+/* Sponsor section card */
+/* Docs subsection */
+/* Pseudo-variables. The following styles need to be changed for different themes. */
+body {
+    font-family: $font-family_1;
+
+    &:not(.dark-mode) {
+        .bg-color-box.bg-white {
+            border-color: $border-color_3;
+            border-color: $border-color_3;
+        }
+
+        .bg-color-box.bg-dark-light-dm {
+            border-color: $border-color_3;
+            border-color: $border-color_3;
+        }
+
+        .bg-color-box.bg-dark-dm {
+            border-color: $border-color_3;
+            border-color: $border-color_3;
+        }
+
+        .bg-color-box.bg-very-dark-dm {
+            border-color: $border-color_3;
+            border-color: $border-color_3;
+        }
+
+        .bg-color-box.bg-transparent {
+            border-color: $border-color_3;
+            border-color: $border-color_3;
+        }
+    }
+}
+
+body.use-roboto-all {
+    font-family: $font-family_2;
+}
+
+body.with-extra-letter-spacing-on-side-navs {
+    .sidebar {
+        * {
+            letter-spacing: 0.3px;
+        }
+    }
+
+    .on-this-page-nav {
+        * {
+            letter-spacing: 0.3px;
+        }
+    }
+}
+
+#loading-section {
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+
+    div {
+        display: block;
+        position: absolute;
+        width: 6.4rem;
+        height: 6.4rem;
+        margin: .8rem;
+        border: .5rem solid transparent;
+        border-radius: 50%;
+        animation: loader-animation 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        border-color: $border-color_1;
+        border-color: $border-color_1;
+
+        &:nth-child(1) {
+            animation-delay: -0.45s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: -0.3s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: -0.15s;
+        }
+    }
+}
+
+body.loading {
+    overflow: hidden;
+
+    .page-wrapper {
+        visibility: hidden;
+    }
+
+    #loading-section {
+        display: flex;
+    }
+}
+
+.halfmoon-logo-img {
+    width: 10.8rem;
+    margin-right: .5rem;
+}
+
+.navbar-menu-btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.sidebar {
+    .hidden-search-terms {
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+.btn-download-sm {
+    width: 16rem;
+}
+
+.on-this-page-nav {
+    position: fixed;
+    margin-right: 2rem;
+    z-index: 20;
+    background-color: $background-color_1;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    background-color: $background-color_1;
+
+    .title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        text-align: left;
+        display: block;
+        padding: 0.4rem 0 0.4rem 2rem;
+        line-height: 1.4;
+        color: $color_1;
+        border-left: 1px solid rgba(0, 0, 0, 0.15);
+
+        &:hover {
+            color: $color_3;
+            text-decoration: none;
+            color: $color_3;
+        }
+    }
+}
+
+.dark-mode {
+    .on-this-page-nav {
+        background-color: $background-color_2;
+        background-color: $background-color_2;
+
+        a {
+            color: $color_2;
+            border-color: $border-color_2;
+
+            &:hover {
+                color: $color_3;
+                text-decoration: none;
+                color: $color_3;
+            }
+        }
+    }
+
+    .custom-footer {
+        background-color: $background-color_4;
+        background-color: $background-color_4;
+        border-top-color: $border-top-color_1;
+
+        a.custom-footer-link {
+            color: $color_2;
+
+            &:hover {
+                color: $color_3;
+                text-decoration: none;
+                color: $color_3;
+            }
+        }
+    }
+
+    .code-container {
+        position: relative;
+
+        .copy-button {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            width: 8rem;
+            height: 2.4rem;
+            line-height: 2.4rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            z-index: 5;
+        }
+    }
+
+    .subscriber-form-container {
+        background-color: $background-color_4;
+        background-color: $background-color_4;
+    }
+
+    .bg-color-box.bg-dark {
+        border-color: $border-color_4;
+        border-right-color: $border-right-color_3;
+    }
+
+    .bg-color-box.bg-dark-dm {
+        border-color: $border-color_4;
+        border-right-color: $border-right-color_3;
+    }
+
+    .bg-color-box.bg-transparent {
+        border-color: $border-color_4;
+        border-right-color: $border-right-color_3;
+    }
+
+    .fake-window {
+        .fake-window-top-row {
+            background-color: $background-color_6;
+        }
+    }
+
+    .fake-content {
+        background-color: $background-color_7;
+        border-color: $border-color_5;
+    }
+
+    .container-box {
+        background-color: $background-color_8;
+        border-color: $border-color_2;
+        outline-color: $outline-color_1;
+        background-color: $background-color_8;
+    }
+
+    .row-with-bg {
+        background-color: $background-color_4;
+        outline-color: $outline-color_2;
+        background-color: $background-color_4;
+        outline-color: $outline-color_2;
+    }
+
+    .fake-sidebar {
+        background-color: $background-color_8;
+        border-right-color: $border-right-color_2;
+    }
+
+    .docs-navbar-sidebar-container {
+        border-color: $border-color_6;
+
+        .small-device-window {
+            border-color: $border-color_6;
+        }
+    }
+
+    .iframe-message {
+        background-color: $background-color_6;
+    }
+
+    .starter-template-generator-content {
+        border-color: $border-color_6;
+
+        .navbar {
+            background-color: $background-color_6;
+        }
+    }
+
+    .customization-demo-content {
+        border-color: $border-color_6;
+
+        .navbar {
+            background-color: $background-color_6;
+        }
+    }
+
+    .customize-card {
+        .docs-cards-container {
+            border-color: $border-color_6;
+        }
+    }
+
+    .code-header {
+        background-color: $background-color_6;
+    }
+
+    .starter-template-output-header {
+        background-color: $background-color_6;
+    }
+
+    .sponsor-section-card {
+        background-color: $background-color_10;
+        color: $color_5;
+        background-color: $background-color_10;
+
+        &:hover {
+            color: $color_5;
+        }
+
+        &:focus {
+            color: $color_5;
+        }
+
+        &:active {
+            color: $color_5;
+        }
+    }
+
+    .sponsor-section-card-scroll-block {
+        background-color: $background-color_12;
+        background-color: $background-color_12;
+    }
+
+    .docs-subsection {
+        border-color: $border-color_6;
+    }
+
+    .hljs {
+        background-color: $background-color_4;
+        border-color: $border-color_7;
+    }
+
+    .code-card {
+        .hljs {
+            background-color: $background-color_8;
+        }
+    }
+}
+
+.custom-footer {
+    background-color: $background-color_3;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-left-color: $border-left-color_1;
+    border-right-color: $border-right-color_1;
+    border-bottom-color: $border-bottom-color_1;
+    background-color: $background-color_3;
+    border-top-color: $border-top-color_1;
+
+    a.custom-footer-link {
+        color: $color_4;
+
+        &:hover {
+            color: $color_3;
+            text-decoration: none;
+            color: $color_3;
+        }
+    }
+
+    .btn-scroll-to-top {
+        border-radius: 3rem;
+    }
+}
+
+.code-container {
+    position: relative;
+
+    .copy-button {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 8rem;
+        height: 2.4rem;
+        line-height: 2.4rem;
+        padding-top: 0;
+        padding-bottom: 0;
+        z-index: 5;
+    }
+}
+
+.subscriber-form-container {
+    min-height: 100% !important;
+    background-color: $background-color_3;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+    background-color: $background-color_3;
+}
+
+.mr-2 {
+    margin-right: 0.2rem;
+}
+
+.font-family-monospace {
+    font-family: $font-family_3;
+}
+
+.col-text-container {
+    width: 6.8rem;
+}
+
+.bg-color-box {
+    border: 1px solid transparent;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.4rem;
+}
+
+.fake-window {
+    .fake-window-top-row {
+        padding: 1rem;
+        background-color: $background-color_5;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+    }
+}
+
+.fake-button {
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+
+    &:after {
+        content: '\200b';
+    }
+}
+
+.fake-content {
+    height: 1.4rem;
+    background-color: $background-color_5;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+
+    &:after {
+        content: '\200b';
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.container-box {
+    background-color: $background-color_1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    background-color: $background-color_1;
+}
+
+.container-box.no-outline {
+    outline: none;
+}
+
+.row-with-bg {
+    background-color: $background-color_9;
+    background-color: $background-color_9;
+    outline-color: $outline-color_3;
+}
+
+.btn-dropdown-alignment {
+    width: 8.4rem;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fake-sidebar {
+    width: 26rem;
+    height: 100%;
+    background-color: $background-color_1;
+    border: 1px solid transparent;
+    border-right-color: $border-right-color_2;
+}
+
+.docs-cards-container {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom-color: $border-bottom-color_1;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+}
+
+.docs-navbar-sidebar-container {
+    border: 1px solid transparent;
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+
+    .small-device-window {
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+.iframe-message {
+    padding: 1rem 2rem;
+    background-color: $background-color_5;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.starter-template-generator-content {
+    border: 1px solid transparent;
+    border-radius: 0.4rem;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    .navbar-container {
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+    }
+
+    .navbar {
+        background-color: $background-color_5;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-left-radius: 0.4rem;
+        border-top-right-radius: 0.4rem;
+    }
+}
+
+.customization-demo-content {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+    border-bottom: none;
+
+    .navbar {
+        background-color: $background-color_5;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+
+.customize-card {
+    .docs-cards-container {
+        border-bottom: 1px solid transparent;
+    }
+
+    .iframe-message-no-code {
+        border-bottom-left-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+    }
+}
+
+.code-header {
+    padding: 1rem 2rem;
+    background-color: $background-color_5;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.starter-template-output-header {
+    padding: 1rem 2rem;
+    background-color: $background-color_5;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.d-block-only-in-ie {
+    display: none;
+}
+
+.sponsor-section-card {
+    display: block;
+    text-decoration: none;
+    color: $color_1;
+
+    &:hover {
+        text-decoration: none;
+        color: $color_1;
+    }
+
+    &:focus {
+        text-decoration: none;
+        box-shadow: 0 0 0 0.2rem rgba(24, 144, 255, 0.6);
+        outline: none;
+        color: $color_1;
+    }
+
+    &:active {
+        color: $color_1;
+    }
+}
+
+.font-size-10 {
+    font-size: 1rem;
+}
+
+.h-120 {
+    height: 12rem;
+}
+
+.sponsor-section-card-scroll-block {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 1rem;
+    border-bottom-right-radius: 0.4rem;
+    background-color: $background-color_11;
+    border-bottom-right-radius: 0.4rem;
+    background-color: $background-color_11;
+}
+
+.w-60 {
+    width: 6rem;
+}
+
+.h-60 {
+    height: 6rem;
+}
+
+.docs-subsection {
+    padding-left: 2rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.hljs {
+    background-color: $background-color_3;
+    border-color: $border-color_7;
+}
+
+.code-card {
+    border-color: $border-color_7;
+}
+
+@media (max-width: 400px) {
+    .navbar-menu-btn {
+        padding: 0;
+        width: 3.6rem;
+
+        .text {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .on-this-page-nav-container {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .subscriber-form-container {
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .docs-footer-card {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+
+        .subscriber-form-container {
+            border-radius: 0;
+        }
+    }
+
+    .card.card-w-full-xs {
+        margin: 0;
+        border-radius: 0;
+        border-right: none;
+        border-left: none;
+
+        .fake-window {
+            border-radius: 0;
+        }
+
+        .fake-window-top-row {
+            border-radius: 0;
+        }
+
+        .docs-cards-container {
+            border-radius: 0;
+            border-right: none;
+            border-left: none;
+        }
+
+        .docs-navbar-sidebar-container {
+            border-radius: 0;
+            border-right: none;
+            border-left: none;
+        }
+
+        .starter-template-generator-content {
+            border-radius: 0;
+            border-right: none;
+            border-left: none;
+
+            .navbar-container {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+
+            .navbar {
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+            }
+        }
+
+        .customization-demo-content {
+            border-right: none;
+            border-left: none;
+        }
+    }
+
+    .docs-navbar-sidebar-container {
+        .small-device-window {
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    .customize-card {
+        .iframe-message-no-code {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+    }
+}
+
+@media screen and (-ms-high-contrast: active) {
+    .d-none-only-in-ie {
+        display: none;
+    }
+
+    .d-block-only-in-ie {
+        display: block;
+    }
+}
+
+@media (-ms-high-contrast: none) {
+    .d-none-only-in-ie {
+        display: none;
+    }
+
+    .d-block-only-in-ie {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .with-custom-css-scrollbars {
+        .hljs {
+            scrollbar-color: rgba(0, 0, 0, 0.25) #f7f7f7;
+        }
+    }
+
+    .dark-mode.with-custom-css-scrollbars {
+        .hljs {
+            scrollbar-color: rgba(255, 255, 255, 0.25) #111417;
+        }
+    }
+
+    .dark-mode {
+        .code-card {
+            .hljs {
+                scrollbar-color: rgba(255, 255, 255, 0.25) #191c20;
+            }
+        }
+    }
+}

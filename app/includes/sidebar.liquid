@@ -1,0 +1,61 @@
+<div class="sidebar">
+  <div class="sidebar-menu">
+    <!-- Sidebar brand -->
+    <a href="#" class="sidebar-brand">
+      <img src="https://github.com/zxce3.png" alt="...">
+      Brand
+    </a>
+    <!-- Sidebar content with the search box -->
+    <div class="sidebar-content">
+      <input type="text" class="form-control" placeholder="Search">
+      <div class="mt-10 font-size-12"> <!-- mt-10 = margin-top: 1rem (10px), font-size-12 = font-size: 1.2rem (12px) -->
+        Press <kbd>/</kbd> to focus
+      </div>
+    </div>
+    <!-- Sidebar links (with icons) and titles -->
+    <h5 class="sidebar-title">Getting started</h5>
+    <div class="sidebar-divider"></div>
+    {% for pg in collections.pages %}
+    <a href="{{ pg.url }}" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="bi bi-{{ pg.data.icon   }}" aria-hidden="true"></i>
+      </span>
+      {{ pg.data.title }}
+    </a>        
+    {% endfor %}
+
+    <a href="#" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-terminal" aria-hidden="true"></i>
+      </span>
+      CLI commands
+    </a>
+    <br />
+    <h5 class="sidebar-title">Components</h5>
+    <div class="sidebar-divider"></div>
+    <a href="#" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+      </span>
+      File explorer
+    </a>
+    <a href="#" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-table" aria-hidden="true"></i>
+      </span>
+      Spreadsheet
+    </a>
+    <a href="#" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-map-o" aria-hidden="true"></i>
+      </span>
+      Map
+    </a>
+    <a href="#" class="sidebar-link sidebar-link-with-icon">
+      <span class="sidebar-icon">
+        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+      </span>
+      Messenger
+    </a>
+  </div>
+</div>

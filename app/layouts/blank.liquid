@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%- include 'head.liquid' -%}
+<body class="dark-mode with-custom-webkit-scrollbars with-custom-css-scrollbars" data-set-preferred-mode-onload="true"
+  data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-controller="search">
+    <div id="page-wrapper" class="page-wrapper">
+        <div class="content-wrapper bg-dark-dm bg-light-lm">
+            <div class="container-fluid">
+                <div class="row h-full">
+                    <div class="col-md-8 offset-md-2">
+        <input type="search" autocomplete="off" class="form-control" placeholder="Cari disini" id="search-input">
+
+                        <div id="search-results" class="mt-10"></div>
+                        {{ content }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</body>
+</html>

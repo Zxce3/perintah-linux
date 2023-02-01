@@ -1,0 +1,37 @@
+<!-- Navbar with input group -->
+<nav class="navbar">
+  <!-- Navbar brand -->
+  <a href="/" class="navbar-brand">
+ <img src="/assets/img/tux.png" alt="Tux logo png" style="height: 6rem; margin-top: 2rem;">
+  </a>
+  <!-- Inline form with input group -->
+  <form class="form-inline ml-auto w-full"> <!-- ml-auto = margin-left: auto -->
+    <div class="input-group ml-5">
+      <input type="search" autocomplete="off" class="form-control" placeholder="Cari disini" id="search-input">
+    </div>
+  </form>
+<ul class="navbar-nav ml-auto" style="height: 90% !important;"> <!-- ml-auto = margin-left: auto -->
+  <li class="nav-item dropdown">
+    <a class="btn btn-square rounded-circle ml-5 font-weight-bolder" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+      <i class="bi bi-code" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle">
+      {%- for pg in collections.pages -%}
+          <a href="{{ pg.url }}" class="dropdown-item">{{ pg.data.title }}</a>
+      {%- endfor -%}
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-content">
+        <a href="#" class="btn btn-block hidden-lg-and-up">
+          <i class="bi bi-github"></i>
+          Github
+        </a>
+      </div>
+    </div>
+  </li>
+  <li class="nav-item ml-5">
+    <a href="#" class="btn btn-square hidden-md-and-down rounded-circle">
+      <i class="bi bi-github"></i>
+    </a>
+  </li>
+</ul>
+</nav>
