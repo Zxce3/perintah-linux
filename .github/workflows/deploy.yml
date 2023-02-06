@@ -1,0 +1,34 @@
+# Using node 16.17.1
+#
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16.17.1
+      - run: yarn install
+      - run: `
+          gh api \
+          -H "Accept: application/vnd.github+json" \
+          repos/${{ github.repository }}/contributors > app/data/contrib.json
+      - run: yarn build
+      - name: Setup git commiter
+        run: |
+          git config --global user.name "Mandakara Sadewa"
+          git config --global user.email "mdswa@zxce3.net"
+      - name: Deploy to gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: public
+          clean: true
+          git-config-name: Mandakara Sadewa
+          git-config-email: mdswa@zxce3.net
+          
