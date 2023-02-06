@@ -1,0 +1,22 @@
+[
+  {
+    "t": "awk",
+    "u": "/c/awk/",
+    "d": "digunakan untuk memproses dan memanipulasi teks, terutama untuk data tabular."
+  },
+  {
+    "t": "cd",
+    "u": "/c/cd/",
+    "d": "Perintah untuk mengubah direktori atau folder saat ini."
+  },
+  {
+    "t": "pwd",
+    "u": "/c/pwd/",
+    "d": "untuk menampilkan direktori saat ini (current working directory)."
+  },
+  {
+    "t": "tes",
+    "u": "/c/tes/",
+    "d": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]
