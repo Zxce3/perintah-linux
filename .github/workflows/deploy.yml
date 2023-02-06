@@ -21,16 +21,19 @@ jobs:
           -H "Accept: application/vnd.github+json" \
           repos/${{ github.repository }}/contributors > app/data/contrib.json
       - run: yarn build
-      - name: Setup git commiter
+      - name: add date
         run: |
-          git config --global user.name "Mandakara Sadewa"
-          git config --global user.email "mdswa@zxce3.net"
-      - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@v4
+          echo TIME=`date '+%Y-%m-%d-%H:%M:%S %Z'` >> $GITHUB_ENV
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          branch: gh-pages
-          folder: public
-          clean: true
-          git-config-name: Mandakara Sadewa
-          git-config-email: mdswa@zxce3.net
+          target_branch: gh-pages
+          build_dir: public
+          keep_history: true
+          committer: Mandakara Sadewa <mdswa@zxce3.net>
+          author: Mandakara Sadewa <mdswa@zxce3.net>
+          commit_message: "Update `${{ env.TIME }}`"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
