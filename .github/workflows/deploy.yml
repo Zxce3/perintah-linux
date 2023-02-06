@@ -14,7 +14,9 @@ jobs:
         with:
           node-version: 16.17.1
       - run: yarn install
-      - run: |
+      - env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: |
           gh api \
           -H "Accept: application/vnd.github+json" \
           repos/${{ github.repository }}/contributors > app/data/contrib.json
