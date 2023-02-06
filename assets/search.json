@@ -1,5 +1,10 @@
 [
   {
+    "t": "adduser",
+    "u": "/c/adduser/",
+    "d": "perintah **adduser** digunakan untuk menambahkan user baru ke sistem."
+  },
+  {
     "t": "awk",
     "u": "/c/awk/",
     "d": "digunakan untuk memproses dan memanipulasi teks, terutama untuk data tabular."
@@ -8,6 +13,11 @@
     "t": "cd",
     "u": "/c/cd/",
     "d": "Perintah untuk mengubah direktori atau folder saat ini."
+  },
+  {
+    "t": "passwd",
+    "u": "/c/passwd/",
+    "d": "perintah **passwd** digunakan untuk mengatur password dari user yang sudah ada di sistem."
   },
   {
     "t": "pwd",

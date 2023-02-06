@@ -16,10 +16,10 @@
   <meta name="msapplication-navbutton-color" content="#000000">
   <!-- iOS Safari mobile address bar theming -->
   <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
-  <title>awk - Perintah Linux
+  <title>adduser - Perintah Linux
   </title>
-  <meta name="description" content="digunakan untuk memproses dan memanipulasi teks, terutama untuk data tabular.">
-  <link rel="canonical" href="https://pl.zxce3.net/c/awk/">
+  <meta name="description" content="perintah **adduser** digunakan untuk menambahkan user baru ke sistem.">
+  <link rel="canonical" href="https://pl.zxce3.net/c/adduser/">
   <link rel="shortcut icon" href="/assets/img/tux.png" type="image/x-icon">
   <link rel="icon" href="/assets/img/tux.png" type="image/x-icon">
   <link rel="apple-touch-icon" href="/assets/img/tux.png">
@@ -78,47 +78,30 @@
             
 <div class="content">
 	<p class="text-right" style="margin-bottom: -3em !important;">
-		<a href="https://github.com/Zxce3/perintah-linux/edit/main/app/perintah/awk.md" target="_blank" class="btn btn-rounded btn-sm">
+		<a href="https://github.com/Zxce3/perintah-linux/edit/main/app/perintah/adduser.md" target="_blank" class="btn btn-rounded btn-sm">
 			<i class="bi bi-pen"></i> Edit
 		</a>
 	</p>
 	<h1 class="border-bottom">
-		awk
+		adduser
 	</h1>
-	<h1 id="awk" tabindex="-1">awk <a class="header-anchor text-decoration-none" href="#awk">#</a></h1>
-<p>digunakan untuk memproses dan memanipulasi teks, terutama untuk data tabular.</p>
-<h2 id="catatan-tambahan" tabindex="-1">Catatan tambahan <a class="header-anchor text-decoration-none" href="#catatan-tambahan">#</a></h2>
+	<h1 id="adduser" tabindex="-1">adduser <a class="header-anchor text-decoration-none" href="#adduser">#</a></h1>
+<p>perintah <strong>adduser</strong> digunakan untuk menambahkan user baru ke sistem.</p>
+<p>Biasanya hanya dilakukan oleh <em>root</em> untuk menambahkan user atau akun yang baru. Setelah perintah ini bisa dilanjutkan dengan perintah passwd yaitu untuk mengatur password dari user yang baru saja dibuat.</p>
+<h2 id="contoh" tabindex="-1">Contoh <a class="header-anchor text-decoration-none" href="#contoh">#</a></h2>
+<pre class="language-bash"><code class="language-bash">adduser <span class="token punctuation">[</span>nama_user<span class="token punctuation">]</span></code></pre>
+<p>ini akan menambahkan user baru dengan nama [nama_user] ke sistem.</p>
+<p>parameter tambahan yang bisa digunakan adalah:</p>
 <ul>
-<li><code>awk</code> merupakan singkatan dari Aho, Weinberger, and Kernighan.</li>
-<li><code>awk</code> bisa digunakan untuk memproses dan memanipulasi data tabular dalam berkas teks atau output perintah lain.</li>
-<li><code>awk</code> memiliki banyak built-in functions dan statements yang memudahkan pengguna untuk memanipulasi data.</li>
+<li>-c “Keterangan” : untuk menambahkan keterangan pada user</li>
+<li>-d /home/[nama_user] : untuk menentukan direktori home dari user</li>
+<li>-g [nama_group] : untuk menentukan group dari user</li>
+<li>-s /bin/bash : untuk menentukan shell dari user</li>
+<li>-u [nomor_user] : untuk menentukan nomor user</li>
+<li>-m : untuk membuat direktori home dari user</li>
 </ul>
-<h3 id="format-dan-opsi-parameter-perintah" tabindex="-1">Format dan opsi parameter perintah <a class="header-anchor text-decoration-none" href="#format-dan-opsi-parameter-perintah">#</a></h3>
-<p>Format: <code>awk [opsi] 'script' [file]</code></p>
-<p>Opsi:</p>
-<ul>
-<li><code>-F</code> : menentukan field separator.</li>
-<li><code>-v</code> : menentukan variabel.</li>
-<li><code>-f</code> : membaca script dari berkas.</li>
-</ul>
-<h3 id="struktur-dasar-perintah" tabindex="-1">Struktur dasar perintah <a class="header-anchor text-decoration-none" href="#struktur-dasar-perintah">#</a></h3>
-<pre class="language-bash"><code class="language-bash"><span class="token function">awk</span> <span class="token string">'script'</span> <span class="token punctuation">[</span>file<span class="token punctuation">]</span></code></pre>
-<h3 id="cara-kerja-perintah" tabindex="-1">Cara kerja perintah <a class="header-anchor text-decoration-none" href="#cara-kerja-perintah">#</a></h3>
-<p>Perintah <code>awk</code> membaca berkas teks atau output perintah lain, menjalankan script yang ditentukan, dan menampilkan hasil akhir. Script tersebut menentukan bagaimana data tabular akan diproses dan diformatkan.</p>
-<pre class="language-bash"><code class="language-bash"><span class="token function">awk</span> <span class="token string">'{ print $1 }'</span> data.txt</code></pre>
-<ul>
-<li>Dalam script <code>awk</code>, biasanya digunakan statement <code>BEGIN</code> dan <code>END</code> sebagai wrapper untuk inisialisasi dan akhir proses.</li>
-<li>Dalam script <code>awk</code>, juga digunakan pattern dan action. Pattern berfungsi sebagai trigger untuk menentukan baris yang akan diproses, dan action berisi perintah yang akan dilakukan pada baris yang diproses.</li>
-<li>Dalam script <code>awk</code>, variabel-variabel seperti <code>$1</code>, <code>$2</code>, dll. digunakan untuk mengakses kolom data dalam berkas.</li>
-<li>Dalam script <code>awk</code>, juga tersedia banyak built-in functions yang memudahkan pengguna untuk memanipulasi data, seperti <code>length</code>, <code>substr</code>, <code>tolower</code>, dll.</li>
-</ul>
-<pre class="language-bash"><code class="language-bash"><span class="token function">awk</span> <span class="token string">'BEGIN { FS = "," } { print $2 }'</span> data.csv</code></pre>
-<h3 id="contoh-perintah" tabindex="-1">Contoh perintah <a class="header-anchor text-decoration-none" href="#contoh-perintah">#</a></h3>
-<p>Berikut adalah beberapa contoh perintah <code>awk</code> yang bisa digunakan:</p>
-<ul>
-<li>Menampilkan kolom pertama dari setiap baris dalam berkas <code>data.txt</code>:</li>
-</ul>
-<pre class="language-bash"><code class="language-bash"><span class="token function">awk</span> <span class="token string">'{ print $1 }'</span> data.txt</code></pre>
+<p>Sebagai contoh:</p>
+<pre class="language-bash"><code class="language-bash">adduser <span class="token parameter variable">-c</span> <span class="token string">"User baru"</span> <span class="token parameter variable">-d</span> /home/userbaru <span class="token parameter variable">-g</span> userbaru <span class="token parameter variable">-s</span> /bin/bash <span class="token parameter variable">-u</span> <span class="token number">1000</span> <span class="token parameter variable">-m</span> userbaru</code></pre>
 
 </div>
           </div>
