@@ -14,7 +14,7 @@ jobs:
         with:
           node-version: 16.17.1
       - run: yarn install
-      - run: `
+      - run: |
           gh api \
           -H "Accept: application/vnd.github+json" \
           repos/${{ github.repository }}/contributors > app/data/contrib.json
@@ -31,4 +31,4 @@ jobs:
           clean: true
           git-config-name: Mandakara Sadewa
           git-config-email: mdswa@zxce3.net
-          
+
