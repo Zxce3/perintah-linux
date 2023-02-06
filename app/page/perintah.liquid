@@ -12,7 +12,7 @@ permalink: "c/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber | plus:
 
 <section id="content" class="body">
     <div class="row">
-        {%- for post in pagination.items -%}
+        {%- for post in pagination.items reversed -%}
         <div class="col-lg-6">
             <a href="{{ post.url }}" class="mw-full text-decoration-none border m-5 p-0 d-flex">
 
