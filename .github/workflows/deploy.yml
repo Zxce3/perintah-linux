@@ -26,7 +26,7 @@ jobs:
           git config --global user.name "Mandakara Sadewa"
           git config --global user.email "mdswa@zxce3.net"
       - name: Deploy to gh-pages
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: public
