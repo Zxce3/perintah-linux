@@ -15,6 +15,16 @@
     "d": "Perintah untuk mengubah direktori atau folder saat ini."
   },
   {
+    "t": "ls",
+    "u": "/c/ls/",
+    "d": "- `ls` merupakan singkatan dari list
+- `ls` bisa menjadi perintah bawaan sistem operasi atau perintah shell
+- Dalam shell bash, jika anda kebingungan untuk mengingat file atau folder yang anda
+tuju, anda bisa menggunakan perintah `ls` untuk mengetahui isi dari lokasi anda saat
+ini.
+- `ls` bisa juga disingkat menjadi `l`"
+  },
+  {
     "t": "passwd",
     "u": "/c/passwd/",
     "d": "perintah **passwd** digunakan untuk mengatur password dari user yang sudah ada di sistem."
