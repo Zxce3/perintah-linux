@@ -15,11 +15,6 @@
     "d": "Perintah untuk mengubah direktori atau folder saat ini."
   },
   {
-    "t": "ls",
-    "u": "/c/ls/",
-    "d": "ls - adalah perintah untuk melihat isi dari direktori `saat ini`"
-  },
-  {
     "t": "passwd",
     "u": "/c/passwd/",
     "d": "perintah **passwd** digunakan untuk mengatur password dari user yang sudah ada di sistem."
