@@ -15,6 +15,11 @@
     "d": "Perintah untuk mengubah direktori atau folder saat ini."
   },
   {
+    "t": "exit",
+    "u": "/c/exit/",
+    "d": "Perintah untuk keluar dari shell."
+  },
+  {
     "t": "ls",
     "u": "/c/ls/",
     "d": "ls - adalah perintah untuk melihat isi dari direktori `saat ini`"

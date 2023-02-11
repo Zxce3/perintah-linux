@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name='mobile-web-app-capable' content='yes'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <!-- Chrome, Firefox OS and Opera mobile address bar theming -->
+  <meta name="theme-color" content="#000000">
+  <!-- Windows Phone mobile address bar theming -->
+  <meta name="msapplication-navbutton-color" content="#000000">
+  <!-- iOS Safari mobile address bar theming -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+  <title>exit - Perintah Linux
+  </title>
+  <meta name="description" content="Perintah untuk keluar dari shell.">
+  <link rel="canonical" href="https://pl.zxce3.net/c/exit/">
+  <link rel="shortcut icon" href="/assets/img/tux.png" type="image/x-icon">
+  <link rel="icon" href="/assets/img/tux.png" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/img/tux.png">
+  <link rel="apple-touch-icon-precomposed" href="/assets/img/tux.png">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <script src="/assets/main.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/gh/zxce3/zxce3/js/zxce3.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/zxce3/zxce3/js/jss.min.js"></script>
+
+  <script>
+    if (zxce3.getPreferredMode() == "light-mode") { } else if (zxce3.getPreferredMode() == "dark-mode") { } else if (zxce3.getPreferredMode() == "not-set") { }
+  </script>
+</head>
+
+<body class="dark-mode with-custom-webkit-scrollbars with-custom-css-scrollbars" data-set-preferred-mode-onload="true"
+  data-dm-shortcut-enabled="true" data-sidebar-shortcut-enabled="true" data-controller="search">
+  <div id="page-wrapper" class="page-wrapper with-navbar"><!-- Navbar with input group -->
+<nav class="navbar">
+  <!-- Navbar brand -->
+  <a href="/" class="navbar-brand">
+ <img src="/assets/img/tux.png" alt="Tux logo png" style="height: 6rem; margin-top: 2rem;">
+  </a>
+  <!-- Inline form with input group -->
+  <form class="form-inline ml-auto w-full"> <!-- ml-auto = margin-left: auto -->
+    <div class="input-group ml-5">
+      <input type="search" autocomplete="off" class="form-control" placeholder="Cari disini" id="search-input">
+    </div>
+  </form>
+<ul class="navbar-nav ml-auto" style="height: 90% !important;"> <!-- ml-auto = margin-left: auto -->
+  <li class="nav-item dropdown">
+    <a class="btn btn-square rounded-circle ml-5 font-weight-bolder" data-toggle="dropdown" id="nav-link-dropdown-toggle">
+      <i class="bi bi-code" aria-hidden="true"></i> <!-- ml-5= margin-left: 0.5rem (5px) -->
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="nav-link-dropdown-toggle"><a href="/blog/" class="dropdown-item">Blog</a><a href="/kontributor/" class="dropdown-item">Kontributor</a><a href="/c/" class="dropdown-item">Perintah</a><a href="/tentang/" class="dropdown-item">Tentang</a><div class="dropdown-divider"></div>
+      <div class="dropdown-content">
+        <a href="https://github.com/Zxce3/perintah-linux" target="_blank" class="btn btn-block hidden-lg-and-up">
+          <i class="bi bi-github"></i>
+          Github
+        </a>
+      </div>
+    </div>
+  </li>
+  <li class="nav-item ml-5">
+    <a href="https://github.com/Zxce3/perintah-linux" target="_blank" class="btn btn-square hidden-md-and-down rounded-circle">
+      <i class="bi bi-github"></i>
+    </a>
+  </li>
+</ul>
+</nav>
+<div class="content-wrapper bg-dark-dm bg-light-lm">
+      <div class="container-fluid">
+        <div class="row h-full">
+          <div class="col-md-8 offset-md-2">
+
+            <ul id="search-results" class="mt-10" style="display: none;"></ul>
+            
+<div class="content">
+	<p class="text-right" style="margin-bottom: -3em !important;">
+		<a href="https://github.com/Zxce3/perintah-linux/edit/main/app/perintah/exit.md" target="_blank" class="btn btn-rounded btn-sm">
+			<i class="bi bi-pen"></i> Edit
+		</a>
+	</p>
+	<h1 class="border-bottom">
+		exit
+	</h1>
+	<h1 id="exit" tabindex="-1">exit <a class="header-anchor text-decoration-none" href="#exit">#</a></h1>
+<p>Perintah untuk keluar dari shell.</p>
+<h2 id="catatan-tambahan" tabindex="-1">Catatan tambahan <a class="header-anchor text-decoration-none" href="#catatan-tambahan">#</a></h2>
+<p>Dalam beberapa kasus, jika Anda memiliki proses yang berjalan di latar
+belakang, shell akan mengingatkan Anda bahwa mereka sedang berjalan dan
+mengembalikan Anda ke prompt perintah.  Dalam hal ini, mengeluarkan exit lagi
+akan menghentikan pekerjaan tersebut dan keluar dari shell.  Alias ​​​​umum
+untuk keluar termasuk “bye”, “logout”, dan “lo”. Setiap perintah mengembalikan
+status keluar (terkadang disebut sebagai status kembali atau kode keluar).
+Perintah yang berhasil mengembalikan 0, sedangkan yang tidak berhasil
+mengembalikan nilai bukan nol yang biasanya dapat diartikan sebagai kode
+kesalahan.  Perintah, program, dan utilitas UNIX yang berperilaku baik
+mengembalikan kode keluar 0 setelah berhasil diselesaikan, meskipun ada beberapa
+pengecualian.</p>
+<p>Demikian pula, fungsi dalam skrip dan skrip itu sendiri mengembalikan status
+keluar.  Perintah terakhir yang dijalankan dalam fungsi atau skrip menentukan
+status keluar.  Di dalam skrip, perintah keluar nnn dapat digunakan untuk
+mengirimkan status keluar nnn ke shell (nnn harus bilangan bulat dalam kisaran 0 - 255).</p>
+<h3 id="contoh" tabindex="-1">Contoh <a class="header-anchor text-decoration-none" href="#contoh">#</a></h3>
+<p>Contoh 1: Keluar dari shell</p>
+<pre class="language-bash"><code class="language-bash">user@host:~$ <span class="token builtin class-name">exit</span><br><span class="token builtin class-name">logout</span><br><br><span class="token comment"># su user</span><br>user@host:~<span class="token comment"># exit</span><br><span class="token builtin class-name">exit</span><br>root@host:~$<br></code></pre>
+<p>Contoh 2: perintah exit dalam skrip</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token builtin class-name">echo</span> <span class="token string">"Ini adalah tes skrip."</span><br><span class="token comment"># menghentikan shell skrip dengan pesan sukses</span><br><span class="token builtin class-name">exit</span> <span class="token number">0</span></code></pre>
+<pre class="language-bash"><code class="language-bash">user@host:~$ ./test.sh<br>Ini adalah tes skrip.user@host:~$ <span class="token builtin class-name">echo</span> <span class="token variable">$?</span><br><span class="token number">0</span></code></pre>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span><br><span class="token builtin class-name">echo</span> <span class="token string">"Ini adalah tes skrip."</span><br><span class="token comment"># menghentikan shell skrip dengan pesan kesalahan</span><br><span class="token builtin class-name">exit</span> <span class="token number">1</span></code></pre>
+<pre class="language-bash"><code class="language-bash">user@host:~$ ./test.sh<br>Ini adalah tes skrip.user@host:~$ <span class="token builtin class-name">echo</span> <span class="token variable">$?</span><br><span class="token number">1</span></code></pre>
+
+</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  </div>
+</body>
+
+</html>
