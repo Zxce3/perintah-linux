@@ -25,6 +25,11 @@
     "d": "ls - adalah perintah untuk melihat isi dari direktori `saat ini`"
   },
   {
+    "t": "mv",
+    "u": "/c/mv/",
+    "d": "Perintah 'mv' digunakan untuk memindahkan atau menyalin file dan direktori dari satu lokasi ke lokasi lain."
+  },
+  {
     "t": "passwd",
     "u": "/c/passwd/",
     "d": "perintah **passwd** digunakan untuk mengatur password dari user yang sudah ada di sistem."
@@ -33,6 +38,11 @@
     "t": "pwd",
     "u": "/c/pwd/",
     "d": "untuk menampilkan direktori saat ini (current working directory)."
+  },
+  {
+    "t": "rm",
+    "u": "/c/rm/",
+    "d": "Perintah 'rm' digunakan untuk menghapus file atau direktori pada sistem operasi Unix dan Linux."
   },
   {
     "t": "tes",
