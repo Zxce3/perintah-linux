@@ -9,7 +9,7 @@ Perintah 'mv' digunakan untuk memindahkan atau menyalin file dan direktori dari 
 
 ### Format dan opsi parameter perintah
 
-Misalnya, jika Anda ingin memindahkan file bernama file1.txt dari direktori /home/user/Documents ke /home/user/Pictures, maka perintah mv /home/user/Documents/file1.txt /home/user/ foto dapat digunakan Untuk memindahkan file ke direktori baru. Jika Anda ingin mengganti nama file menjadi file2.txt saat memindahkannya, perintah mv dapat digunakan /home/user/Documents/file1.txt /home/user/Pictures/file2.txt.
+Misalnya, jika Anda ingin memindahkan file bernama file1.txt dari direktori /home/user/Documents ke /home/user/Pictures, maka perintah `mv /home/user/Documents/file1.txt` `/home/user/` foto dapat digunakan Untuk memindahkan file ke direktori baru. Jika Anda ingin mengganti nama file menjadi file2.txt saat memindahkannya, perintah mv dapat digunakan `/home/user/Documents/file1.txt` `/home/user/Pictures/file2.txt`.
 
 ### Struktur dasar perintah
 
